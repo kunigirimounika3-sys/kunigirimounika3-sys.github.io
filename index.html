@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Mounika ashokumar| ECE Student</title>
+    <title>Mounika Kunigiri | ECE | VLSI & ASIC Design</title>
+
+    <meta name="description"
+          content="Portfolio of Mounika Kunigiri, Electronics and Communication Engineering student interested in VLSI, ASIC, RTL Design, FPGA and Embedded Systems.">
 
     <style>
         * {
@@ -15,743 +18,921 @@
         }
 
         body {
-            font-family: "Segoe UI", Arial, sans-serif;
-            background: #fafafa;
-            color: #1f2937;
-            line-height: 1.7;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f7f9fc;
+            color: #172033;
+            line-height: 1.6;
         }
 
-        /* NAVIGATION */
-
+        /* NAVBAR */
         nav {
             position: sticky;
             top: 0;
             z-index: 1000;
-            background: rgba(255,255,255,0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid #e5e7eb;
-
+            background: rgba(255, 255, 255, 0.96);
+            border-bottom: 1px solid #e3e8f0;
+            padding: 15px 8%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-
-            padding: 18px 8%;
         }
 
         .logo {
             font-size: 22px;
             font-weight: 700;
-            color: #111827;
+            color: #102a56;
         }
 
-        .logo span {
-            color: #2563eb;
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
         }
 
         nav a {
             text-decoration: none;
-            color: #4b5563;
-            margin-left: 25px;
-            font-size: 15px;
-            transition: 0.3s;
+            color: #35445d;
+            font-size: 14px;
+            font-weight: 600;
         }
 
         nav a:hover {
-            color: #2563eb;
+            color: #1769aa;
         }
 
+        /* GENERAL */
+        section {
+            padding: 80px 8%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            font-size: 30px;
+            color: #102a56;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #65748b;
+        }
 
         /* HERO */
-
         .hero {
             min-height: 88vh;
-
             display: flex;
             align-items: center;
-
-            padding: 70px 8%;
-
+            justify-content: center;
+            text-align: center;
             background:
-                radial-gradient(circle at 85% 20%,
-                #dbeafe 0,
-                transparent 30%),
-                #fafafa;
+                linear-gradient(135deg, #eef5ff, #ffffff);
         }
 
         .hero-content {
-            max-width: 800px;
-        }
-
-        .small-title {
-            color: #2563eb;
-            font-size: 16px;
-            font-weight: 600;
-            letter-spacing: 1px;
-            margin-bottom: 15px;
+            max-width: 850px;
         }
 
         .hero h1 {
-            font-size: clamp(45px, 7vw, 72px);
-            line-height: 1.1;
-            color: #111827;
-            margin-bottom: 18px;
-        }
-
-        .hero h1 span {
-            color: #2563eb;
+            font-size: 55px;
+            color: #102a56;
+            margin-bottom: 10px;
         }
 
         .hero h2 {
             font-size: 25px;
-            font-weight: 500;
-            color: #374151;
+            color: #1769aa;
             margin-bottom: 20px;
+            font-weight: 600;
         }
 
         .hero p {
-            max-width: 680px;
-            color: #6b7280;
-            font-size: 18px;
-            margin-bottom: 30px;
-        }
-
-
-        /* BUTTONS */
-
-        .buttons {
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-        }
-
-        .button {
-            text-decoration: none;
-            padding: 12px 22px;
-            border-radius: 7px;
-            font-weight: 600;
-            transition: 0.3s;
-        }
-
-        .primary {
-            background: #2563eb;
-            color: white;
-        }
-
-        .primary:hover {
-            background: #1d4ed8;
-            transform: translateY(-2px);
-        }
-
-        .outline {
-            border: 1px solid #d1d5db;
-            color: #374151;
-            background: white;
-        }
-
-        .outline:hover {
-            border-color: #2563eb;
-            color: #2563eb;
-            transform: translateY(-2px);
-        }
-
-
-        /* SECTIONS */
-
-        section {
-            padding: 90px 8%;
-        }
-
-        .section-heading {
-            margin-bottom: 45px;
-        }
-
-        .section-heading small {
-            color: #2563eb;
-            font-weight: 700;
-            letter-spacing: 1px;
-        }
-
-        .section-heading h2 {
-            font-size: 36px;
-            color: #111827;
-            margin-top: 5px;
-        }
-
-
-        /* ABOUT */
-
-        .about-box {
-            max-width: 850px;
-            color: #6b7280;
+            max-width: 720px;
+            margin: auto;
+            color: #526176;
             font-size: 17px;
         }
 
-        .about-box p {
-            margin-bottom: 15px;
-        }
-
-
-        /* SKILLS */
-
-        .skills {
+        .hero-buttons {
+            margin-top: 30px;
             display: flex;
+            justify-content: center;
+            gap: 15px;
             flex-wrap: wrap;
-            gap: 12px;
         }
 
-        .skill {
-            background: white;
-            border: 1px solid #e5e7eb;
-            padding: 10px 18px;
-            border-radius: 30px;
-            color: #374151;
-            font-size: 15px;
+        .btn {
+            display: inline-block;
+            padding: 12px 23px;
+            border-radius: 7px;
+            text-decoration: none;
+            font-weight: 600;
             transition: 0.3s;
         }
 
-        .skill:hover {
-            border-color: #2563eb;
-            color: #2563eb;
+        .btn-primary {
+            background: #1769aa;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #102a56;
             transform: translateY(-2px);
         }
 
-
-        /* PROJECTS */
-
-        .project-grid {
-            display: grid;
-            grid-template-columns:
-                repeat(auto-fit, minmax(270px, 1fr));
-
-            gap: 22px;
-        }
-
-        .project {
+        .btn-outline {
+            border: 1.5px solid #1769aa;
+            color: #1769aa;
             background: white;
-            border: 1px solid #e5e7eb;
-            border-radius: 12px;
-            padding: 28px;
-
-            transition: 0.3s;
         }
 
-        .project:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+        .btn-outline:hover {
+            background: #eef5ff;
+            transform: translateY(-2px);
         }
 
-        .project-number {
-            color: #2563eb;
-            font-size: 14px;
+        /* ABOUT */
+        .about-box {
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 8px 30px rgba(16, 42, 86, 0.07);
+        }
+
+        .about-box p {
+            color: #526176;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        .highlight {
+            color: #1769aa;
             font-weight: 700;
         }
 
-        .project h3 {
-            margin: 8px 0 12px;
-            font-size: 21px;
-            color: #111827;
+        /* SKILLS */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
         }
 
-        .project p {
-            color: #6b7280;
-            font-size: 15px;
+        .skill-card {
+            background: white;
+            padding: 25px;
+            border-radius: 14px;
+            border: 1px solid #e6ebf2;
+            transition: 0.3s;
         }
 
-
-        /* EXPERIENCE */
-
-        .timeline {
-            max-width: 850px;
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(16, 42, 86, 0.08);
         }
 
-        .experience {
-            border-left: 2px solid #dbeafe;
-            padding-left: 25px;
-            margin-bottom: 30px;
+        .skill-card h3 {
+            color: #102a56;
+            margin-bottom: 12px;
+            font-size: 18px;
         }
 
-        .experience h3 {
-            color: #111827;
-            margin-bottom: 5px;
+        .skill-card p {
+            color: #5c6b80;
         }
 
-        .experience .date {
-            color: #2563eb;
+        /* PROJECTS */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .project-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid #e4e9f0;
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 30px rgba(16, 42, 86, 0.09);
+        }
+
+        .project-number {
+            color: #1769aa;
+            font-weight: bold;
             font-size: 14px;
+        }
+
+        .project-card h3 {
+            margin: 8px 0 12px;
+            color: #102a56;
+            font-size: 21px;
+        }
+
+        .project-card p {
+            color: #5c6b80;
+            margin-bottom: 15px;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .tag {
+            background: #eef5ff;
+            color: #1769aa;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 12px;
             font-weight: 600;
         }
 
-        .experience p {
-            color: #6b7280;
-            margin-top: 8px;
+        /* EXPERIENCE */
+        .timeline {
+            position: relative;
+            max-width: 900px;
+            margin: auto;
         }
 
+        .experience-card {
+            background: white;
+            padding: 28px;
+            border-left: 4px solid #1769aa;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            box-shadow: 0 6px 22px rgba(16, 42, 86, 0.06);
+        }
+
+        .experience-card h3 {
+            color: #102a56;
+            margin-bottom: 4px;
+        }
+
+        .experience-card .role {
+            color: #1769aa;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .experience-card ul {
+            padding-left: 20px;
+            color: #5c6b80;
+        }
 
         /* EDUCATION */
-
-        .education {
-            background: #f3f6fb;
-        }
-
-        .education-box {
+        .education-card {
             background: white;
-            border: 1px solid #e5e7eb;
-            border-radius: 12px;
-            padding: 28px;
-            max-width: 800px;
+            padding: 30px;
+            border-radius: 14px;
+            box-shadow: 0 7px 25px rgba(16, 42, 86, 0.06);
         }
 
-        .education-box h3 {
-            color: #111827;
+        .education-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            padding: 18px 0;
+            border-bottom: 1px solid #e7ebf1;
         }
 
-        .education-box p {
-            color: #6b7280;
-            margin-top: 5px;
+        .education-row:last-child {
+            border-bottom: none;
         }
 
+        .education-row h3 {
+            color: #102a56;
+            font-size: 17px;
+        }
+
+        .education-row p {
+            color: #65748b;
+        }
+
+        .education-right {
+            text-align: right;
+            color: #1769aa;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        /* CERTIFICATIONS */
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .cert-card {
+            background: white;
+            padding: 25px;
+            border-radius: 13px;
+            border: 1px solid #e4e9f0;
+        }
+
+        .cert-card h3 {
+            color: #102a56;
+            font-size: 17px;
+            margin-bottom: 8px;
+        }
+
+        .cert-card p {
+            color: #65748b;
+            font-size: 14px;
+        }
 
         /* CONTACT */
-
-        .contact {
-            background: #111827;
+        .contact-box {
+            background: #102a56;
             color: white;
+            padding: 50px 30px;
+            border-radius: 18px;
             text-align: center;
         }
 
-        .contact .section-heading h2 {
-            color: white;
+        .contact-box h2 {
+            font-size: 30px;
+            margin-bottom: 12px;
         }
 
-        .contact p {
-            color: #cbd5e1;
-            max-width: 600px;
-            margin: auto auto 25px;
+        .contact-box p {
+            color: #dbe7f7;
+            margin-bottom: 25px;
         }
 
         .contact-links {
             display: flex;
             justify-content: center;
-            gap: 12px;
+            gap: 15px;
             flex-wrap: wrap;
         }
 
         .contact-links a {
             text-decoration: none;
             color: white;
-            border: 1px solid #475569;
-            padding: 10px 20px;
-            border-radius: 7px;
+            border: 1px solid #8fb9e6;
+            padding: 10px 18px;
+            border-radius: 6px;
             transition: 0.3s;
         }
 
         .contact-links a:hover {
-            border-color: #60a5fa;
-            color: #93c5fd;
+            background: #1769aa;
+            border-color: #1769aa;
         }
 
-
         /* FOOTER */
-
         footer {
             text-align: center;
-            background: #0b1120;
-            color: #94a3b8;
-            padding: 20px;
+            padding: 25px;
+            color: #65748b;
+            background: white;
+            border-top: 1px solid #e5eaf0;
             font-size: 14px;
         }
 
-
         /* MOBILE */
-
-        @media (max-width: 700px) {
+        @media (max-width: 800px) {
 
             nav {
-                padding: 15px 5%;
+                padding: 14px 5%;
             }
 
-            nav div:last-child {
+            nav ul {
                 display: none;
             }
 
             section {
-                padding: 65px 6%;
+                padding: 65px 5%;
             }
 
-            .hero {
-                min-height: 80vh;
-                padding: 60px 6%;
+            .hero h1 {
+                font-size: 39px;
             }
 
             .hero h2 {
-                font-size: 21px;
+                font-size: 20px;
             }
 
             .hero p {
-                font-size: 16px;
+                font-size: 15px;
             }
 
-            .section-heading h2 {
-                font-size: 30px;
+            .skills-grid,
+            .projects-grid,
+            .cert-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .education-row {
+                flex-direction: column;
+                gap: 5px;
+            }
+
+            .education-right {
+                text-align: left;
+            }
+
+            .about-box {
+                padding: 25px;
             }
         }
     </style>
 </head>
 
-
 <body>
 
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="logo">Mounika Kunigiri</div>
 
-<!-- NAVIGATION -->
-
-<nav>
-
-    <div class="logo">
-        M<span>.</span>
-    </div>
-
-    <div>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#experience">Experience</a>
-        <a href="#contact">Contact</a>
-    </div>
-
-</nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Internships</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
 
+    <!-- HERO -->
+    <section class="hero">
 
-<!-- HERO -->
+        <div class="hero-content">
 
-<section class="hero">
+            <h1>Mounika Kunigiri</h1>
 
-    <div class="hero-content">
-
-        <div class="small-title">
-            ELECTRONICS & COMMUNICATION ENGINEERING
-        </div>
-
-        <h1>
-            Hi, I'm <span>Mounika.</span>
-        </h1>
-
-        <h2>
-            ECE Student • VLSI • Embedded Systems • Software
-        </h2>
-
-        <p>
-            I am an Electronics and Communication Engineering student
-            passionate about digital systems, VLSI, embedded technology
-            and software. I enjoy turning what I learn into practical
-            projects and continuously developing my technical skills.
-        </p>
-
-        <div class="buttons">
-
-            <a href="#projects" class="button primary">
-                View Projects
-            </a>
-
-            <a href="https://github.com/kunigirimounika3-sys"
-               target="_blank"
-               class="button outline">
-                GitHub
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- ABOUT -->
-
-<section id="about">
-
-    <div class="section-heading">
-
-        <small>01 — ABOUT</small>
-
-        <h2>A little about me</h2>
-
-    </div>
-
-
-    <div class="about-box">
-
-        <p>
-            I am currently pursuing B.Tech in Electronics and
-            Communication Engineering and building my foundation
-            in both hardware and software.
-        </p>
-
-        <p>
-            My areas of interest include VLSI design, digital
-            electronics, embedded systems, FPGA and programming.
-            I believe in learning by building, experimenting and
-            improving with every project.
-        </p>
-
-    </div>
-
-</section>
-
-
-
-<!-- SKILLS -->
-
-<section id="skills">
-
-    <div class="section-heading">
-
-        <small>02 — SKILLS</small>
-
-        <h2>Technical skills</h2>
-
-    </div>
-
-
-    <div class="skills">
-
-        <div class="skill">C</div>
-        <div class="skill">Python</div>
-        <div class="skill">Verilog</div>
-        <div class="skill">VHDL</div>
-        <div class="skill">ModelSim</div>
-        <div class="skill">Cadence</div>
-        <div class="skill">MATLAB</div>
-        <div class="skill">FPGA</div>
-        <div class="skill">Digital Electronics</div>
-        <div class="skill">Embedded Systems</div>
-
-    </div>
-
-</section>
-
-
-
-<!-- PROJECTS -->
-
-<section id="projects">
-
-    <div class="section-heading">
-
-        <small>03 — PROJECTS</small>
-
-        <h2>Things I've built</h2>
-
-    </div>
-
-
-    <div class="project-grid">
-
-
-        <div class="project">
-
-            <div class="project-number">PROJECT 01</div>
-
-            <h3>ALU using Verilog</h3>
+            <h2>
+                Electronics & Communication Engineering Student
+            </h2>
 
             <p>
-                Designed and simulated an Arithmetic Logic Unit
-                using Verilog HDL with a testbench for functional
-                verification.
+                Aspiring VLSI, ASIC & RTL Design Engineer with hands-on
+                experience in Verilog, VHDL, digital design, FPGA and
+                embedded systems.
             </p>
 
-        </div>
+            <div class="hero-buttons">
 
+                <a href="#projects" class="btn btn-primary">
+                    View My Projects
+                </a>
 
+                <a href="https://github.com/kunigirimounika3-sys"
+                   target="_blank"
+                   class="btn btn-outline">
+                    GitHub
+                </a>
 
-        <div class="project">
+                <a href="https://www.linkedin.com/in/mounika-kunigiri-798769338"
+                   target="_blank"
+                   class="btn btn-outline">
+                    LinkedIn
+                </a>
 
-            <div class="project-number">PROJECT 02</div>
-
-            <h3>Smart alert Walking Stick</h3>
-
-            <p>
-                Developed an ultrasonic obstacle detection system
-                using a sensor, buzzer and LED to provide alerts.
-            </p>
-
-        </div>
-
-
-
-        <div class="project">
-
-            <div class="project-number">PROJECT 03</div>
-
-            <h3>More coming soon</h3>
-
-            <p>
-                I am currently working on new VLSI, FPGA,
-                embedded and software projects. This section
-                will grow as I continue learning.
-            </p>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-
-<!-- EXPERIENCE -->
-
-<section id="experience">
-
-    <div class="section-heading">
-
-        <small>04 — EXPERIENCE</small>
-
-        <h2>Internships & learning</h2>
-
-    </div>
-
-
-    <div class="timeline">
-
-
-        <div class="experience">
-
-            <h3>VLSI Design Internship</h3>
-
-            <div class="date">
-                2-week Internship
             </div>
 
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section id="about">
+
+        <div class="section-title">
+            <h2>About Me</h2>
+            <p>A little about my technical journey</p>
+        </div>
+
+        <div class="about-box">
+
             <p>
-                Completed a VLSI Design internship at MSME Balanagar,
-                gaining practical exposure to VLSI-related concepts.
+                I am an <span class="highlight">
+                Electronics and Communication Engineering student</span>
+                with a strong interest in VLSI, ASIC design, RTL design,
+                FPGA and digital electronics.
+            </p>
+
+            <p>
+                I have gained practical exposure through internships in
+                <span class="highlight">ASIC IC Design</span> and
+                <span class="highlight">Verilog/VHDL</span>, where I explored
+                digital design concepts, HDL-based design, simulation and
+                ASIC design methodologies.
+            </p>
+
+            <p>
+                I enjoy building practical hardware projects and
+                continuously improving my knowledge in both hardware and
+                software technologies.
             </p>
 
         </div>
 
+    </section>
 
 
-        <div class="experience">
+    <!-- SKILLS -->
+    <section id="skills">
 
-            <h3>ASIC IC Design Internship</h3>
+        <div class="section-title">
+            <h2>Technical Skills</h2>
+            <p>Technologies and tools I am learning and working with</p>
+        </div>
 
-            <div class="date">
-                2-week Internship
+        <div class="skills-grid">
+
+            <div class="skill-card">
+                <h3>HDL & Digital Design</h3>
+                <p>
+                    Verilog, VHDL, Digital Logic Design,
+                    RTL Design Basics, Digital Electronics
+                </p>
             </div>
 
-            <p>
-                Completed an ASIC IC Design internship and gained
-                practical exposure to ASIC design concepts.
-            </p>
-
-        </div>
-
-
-
-        <div class="experience">
-
-            <h3>Introduction to Embedded Systems</h3>
-
-            <div class="date">
-                NPTEL Certification
+            <div class="skill-card">
+                <h3>VLSI & ASIC</h3>
+                <p>
+                    ASIC Design, VLSI Fundamentals,
+                    RTL Design, Digital Design Concepts
+                </p>
             </div>
 
-            <p>
-                Completed the NPTEL course Introduction to
-                Embedded Systems.
-            </p>
+            <div class="skill-card">
+                <h3>Programming</h3>
+                <p>
+                    C, Python (Beginner)
+                </p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Hardware</h3>
+                <p>
+                    FPGA, Arduino, Sensor Interfacing
+                </p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Tools & Software</h3>
+                <p>
+                    Cadence, ModelSim, MATLAB,
+                    Xilinx/Vivado, Arduino IDE
+                </p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Embedded Systems</h3>
+                <p>
+                    Basic Embedded Systems Concepts,
+                    C Programming, Arduino and Sensor Interfacing
+                </p>
+            </div>
 
         </div>
 
-
-    </div>
-
-</section>
+    </section>
 
 
+    <!-- PROJECTS -->
+    <section id="projects">
 
-<!-- EDUCATION -->
+        <div class="section-title">
+            <h2>Projects</h2>
+            <p>Academic projects and practical implementations</p>
+        </div>
 
-<section class="education">
+        <div class="projects-grid">
 
-    <div class="section-heading">
+            <!-- PROJECT 1 -->
+            <div class="project-card">
 
-        <small>05 — EDUCATION</small>
+                <div class="project-number">
+                    PROJECT 01
+                </div>
 
-        <h2>Education</h2>
+                <h3>
+                    4-Bit Arithmetic Logic Unit (ALU)
+                </h3>
 
-    </div>
+                <div class="tags">
+                    <span class="tag">Verilog</span>
+                    <span class="tag">VHDL</span>
+                    <span class="tag">RTL</span>
+                    <span class="tag">Digital Logic</span>
+                </div>
+
+                <p>
+                    Designed a 4-bit ALU capable of performing arithmetic
+                    and logical operations including addition, subtraction,
+                    AND, OR, XOR and NOT.
+                </p>
+
+                <p>
+                    Simulated and verified the design using test cases while
+                    applying RTL design and HDL coding concepts.
+                </p>
+
+                <a href="https://github.com/kunigirimounika3-sys"
+                   target="_blank"
+                   class="btn btn-outline">
+                    View on GitHub →
+                </a>
+
+            </div>
 
 
-    <div class="education-box">
+            <!-- PROJECT 2 -->
+            <div class="project-card">
 
-        <h3>
-            B.Tech — Electronics and Communication Engineering
-        </h3>
+                <div class="project-number">
+                    PROJECT 02
+                </div>
+
+                <h3>
+                    Ultrasonic Smart Alert Walking Stick
+                </h3>
+
+                <div class="tags">
+                    <span class="tag">Arduino</span>
+                    <span class="tag">C</span>
+                    <span class="tag">Ultrasonic Sensor</span>
+                    <span class="tag">Embedded</span>
+                </div>
+
+                <p>
+                    Developed a smart walking-stick system for obstacle
+                    detection using an ultrasonic sensor and an alert
+                    mechanism.
+                </p>
+
+                <p>
+                    Programmed and tested the system using Arduino IDE while
+                    applying C programming, sensor interfacing and embedded
+                    system concepts.
+                </p>
+
+                <a href="https://github.com/kunigirimounika3-sys"
+                   target="_blank"
+                   class="btn btn-outline">
+                    View on GitHub →
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- INTERNSHIPS -->
+    <section id="experience">
+
+        <div class="section-title">
+            <h2>Internships</h2>
+            <p>Hands-on exposure and industry-oriented learning</p>
+        </div>
+
+        <div class="timeline">
+
+            <!-- INTERNSHIP 1 -->
+            <div class="experience-card">
+
+                <h3>ASIC IC Design Internship</h3>
+
+                <div class="role">
+                    ASIC IC Design Intern • 2 Weeks
+                </div>
+
+                <ul>
+                    <li>
+                        Gained practical exposure to ASIC IC design flow
+                        and methodology.
+                    </li>
+
+                    <li>
+                        Learned basic concepts of front-end and
+                        back-end ASIC design.
+                    </li>
+
+                    <li>
+                        Worked with digital design concepts related to
+                        ASIC development.
+                    </li>
+
+                    <li>
+                        Gained exposure to EDA tools, simulation and
+                        verification concepts.
+                    </li>
+                </ul>
+
+            </div>
+
+
+            <!-- INTERNSHIP 2 -->
+            <div class="experience-card">
+
+                <h3>MSME – Government of India</h3>
+
+                <div class="role">
+                    Verilog/VHDL Intern • 2 Weeks
+                </div>
+
+                <ul>
+                    <li>
+                        Gained hands-on exposure to Verilog and VHDL.
+                    </li>
+
+                    <li>
+                        Applied HDL concepts to basic digital circuit design.
+                    </li>
+
+                    <li>
+                        Worked on digital design activities using
+                        hardware description languages.
+                    </li>
+
+                    <li>
+                        Gained practical exposure to HDL-based design
+                        and simulation.
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- EDUCATION -->
+    <section id="education">
+
+        <div class="section-title">
+            <h2>Education</h2>
+            <p>Academic background</p>
+        </div>
+
+        <div class="education-card">
+
+            <div class="education-row">
+
+                <div>
+                    <h3>
+                        B.Tech – Electronics and Communication Engineering
+                    </h3>
+
+                    <p>
+                        Dhanalakshmi Srinivasan University, Perambalur
+                    </p>
+                </div>
+
+                <div class="education-right">
+                    CGPA: 8.9<br>
+                    Expected: 2028
+                </div>
+
+            </div>
+
+
+            <div class="education-row">
+
+                <div>
+                    <h3>
+                        Higher Secondary Certificate (HSC)
+                    </h3>
+
+                    <p>
+                        State Board
+                    </p>
+                </div>
+
+                <div class="education-right">
+                    94% • 2023
+                </div>
+
+            </div>
+
+
+            <div class="education-row">
+
+                <div>
+                    <h3>
+                        Secondary School Certificate (SSC)
+                    </h3>
+
+                    <p>
+                        State Board
+                    </p>
+                </div>
+
+                <div class="education-right">
+                    92% • 2021
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CERTIFICATIONS -->
+    <section id="certifications">
+
+        <div class="section-title">
+            <h2>Certifications</h2>
+            <p>Courses and internship certifications</p>
+        </div>
+
+        <div class="cert-grid">
+
+            <div class="cert-card">
+                <h3>ASIC IC Design Internship</h3>
+                <p>
+                    Practical exposure to ASIC IC design concepts,
+                    methodology and EDA-based design flow.
+                </p>
+            </div>
+
+            <div class="cert-card">
+                <h3>MSME – Verilog/VHDL Internship</h3>
+                <p>
+                    Hands-on learning in Verilog, VHDL and
+                    HDL-based digital design.
+                </p>
+            </div>
+
+            <div class="cert-card">
+                <h3>NPTEL</h3>
+                <p>
+                    Introduction to Embedded Systems and Design
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+    <section id="contact">
+
+        <div class="contact-box">
+
+            <h2>Let's Connect</h2>
+
+            <p>
+                I am interested in internships and opportunities in
+                VLSI, ASIC, RTL Design, FPGA and Embedded Systems.
+            </p>
+
+            <div class="contact-links">
+
+                <a href="mailto:mounikakunigiri6@gmail.com">
+                    Email
+                </a>
+
+                <a href="tel:+919182700279">
+                    Phone
+                </a>
+
+                <a href="https://www.linkedin.com/in/mounika-kunigiri-798769338"
+                   target="_blank">
+                    LinkedIn
+                </a>
+
+                <a href="https://github.com/kunigirimounika3-sys"
+                   target="_blank">
+                    GitHub
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
 
         <p>
-            Dhanalakshmi Srinivasan University, Chennai
+            © 2026 Mounika ashokkumar • Electronics & Communication Engineering
         </p>
 
-        <p>
-            Currently pursuing
-        </p>
-
-    </div>
-
-</section>
-
-
-
-<!-- CONTACT -->
-
-<section id="contact" class="contact">
-
-    <div class="section-heading">
-
-        <small>06 — CONTACT</small>
-
-        <h2>Let's connect</h2>
-
-    </div>
-
-
-    <p>
-        I'm always interested in learning opportunities,
-        internships, projects and meaningful technical work.
-    </p>
-
-
-    <div class="contact-links">
-
-        <a href="https://github.com/kunigirimounika3-sys"
-           target="_blank">
-            GitHub
-        </a>
-
-
-        <a href="https://www.linkedin.com/in/mounika-kunigiri-798769338/"
-           target="_blank">
-            LinkedIn
-        </a>
-
-    </div>
-
-</section>
-
-
-
-<!-- FOOTER -->
-
-<footer>
-
-    © 2026 Mounika · Electronics & Communication Engineering
-
-</footer>
-
+    </footer>
 
 </body>
 </html>
