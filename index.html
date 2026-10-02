@@ -1,69 +1,757 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Mounikaashokkumar | ECE Student</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mounika ashokumar| ECE Student</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: #fafafa;
+            color: #1f2937;
+            line-height: 1.7;
+        }
+
+        /* NAVIGATION */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #e5e7eb;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 18px 8%;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 700;
+            color: #111827;
+        }
+
+        .logo span {
+            color: #2563eb;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #4b5563;
+            margin-left: 25px;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #2563eb;
+        }
+
+
+        /* HERO */
+
+        .hero {
+            min-height: 88vh;
+
+            display: flex;
+            align-items: center;
+
+            padding: 70px 8%;
+
+            background:
+                radial-gradient(circle at 85% 20%,
+                #dbeafe 0,
+                transparent 30%),
+                #fafafa;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .small-title {
+            color: #2563eb;
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 {
+            font-size: clamp(45px, 7vw, 72px);
+            line-height: 1.1;
+            color: #111827;
+            margin-bottom: 18px;
+        }
+
+        .hero h1 span {
+            color: #2563eb;
+        }
+
+        .hero h2 {
+            font-size: 25px;
+            font-weight: 500;
+            color: #374151;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 680px;
+            color: #6b7280;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+
+        /* BUTTONS */
+
+        .buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            text-decoration: none;
+            padding: 12px 22px;
+            border-radius: 7px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .primary {
+            background: #2563eb;
+            color: white;
+        }
+
+        .primary:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+        }
+
+        .outline {
+            border: 1px solid #d1d5db;
+            color: #374151;
+            background: white;
+        }
+
+        .outline:hover {
+            border-color: #2563eb;
+            color: #2563eb;
+            transform: translateY(-2px);
+        }
+
+
+        /* SECTIONS */
+
+        section {
+            padding: 90px 8%;
+        }
+
+        .section-heading {
+            margin-bottom: 45px;
+        }
+
+        .section-heading small {
+            color: #2563eb;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .section-heading h2 {
+            font-size: 36px;
+            color: #111827;
+            margin-top: 5px;
+        }
+
+
+        /* ABOUT */
+
+        .about-box {
+            max-width: 850px;
+            color: #6b7280;
+            font-size: 17px;
+        }
+
+        .about-box p {
+            margin-bottom: 15px;
+        }
+
+
+        /* SKILLS */
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .skill {
+            background: white;
+            border: 1px solid #e5e7eb;
+            padding: 10px 18px;
+            border-radius: 30px;
+            color: #374151;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        .skill:hover {
+            border-color: #2563eb;
+            color: #2563eb;
+            transform: translateY(-2px);
+        }
+
+
+        /* PROJECTS */
+
+        .project-grid {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(270px, 1fr));
+
+            gap: 22px;
+        }
+
+        .project {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 28px;
+
+            transition: 0.3s;
+        }
+
+        .project:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+        }
+
+        .project-number {
+            color: #2563eb;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .project h3 {
+            margin: 8px 0 12px;
+            font-size: 21px;
+            color: #111827;
+        }
+
+        .project p {
+            color: #6b7280;
+            font-size: 15px;
+        }
+
+
+        /* EXPERIENCE */
+
+        .timeline {
+            max-width: 850px;
+        }
+
+        .experience {
+            border-left: 2px solid #dbeafe;
+            padding-left: 25px;
+            margin-bottom: 30px;
+        }
+
+        .experience h3 {
+            color: #111827;
+            margin-bottom: 5px;
+        }
+
+        .experience .date {
+            color: #2563eb;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .experience p {
+            color: #6b7280;
+            margin-top: 8px;
+        }
+
+
+        /* EDUCATION */
+
+        .education {
+            background: #f3f6fb;
+        }
+
+        .education-box {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 28px;
+            max-width: 800px;
+        }
+
+        .education-box h3 {
+            color: #111827;
+        }
+
+        .education-box p {
+            color: #6b7280;
+            margin-top: 5px;
+        }
+
+
+        /* CONTACT */
+
+        .contact {
+            background: #111827;
+            color: white;
+            text-align: center;
+        }
+
+        .contact .section-heading h2 {
+            color: white;
+        }
+
+        .contact p {
+            color: #cbd5e1;
+            max-width: 600px;
+            margin: auto auto 25px;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .contact-links a {
+            text-decoration: none;
+            color: white;
+            border: 1px solid #475569;
+            padding: 10px 20px;
+            border-radius: 7px;
+            transition: 0.3s;
+        }
+
+        .contact-links a:hover {
+            border-color: #60a5fa;
+            color: #93c5fd;
+        }
+
+
+        /* FOOTER */
+
+        footer {
+            text-align: center;
+            background: #0b1120;
+            color: #94a3b8;
+            padding: 20px;
+            font-size: 14px;
+        }
+
+
+        /* MOBILE */
+
+        @media (max-width: 700px) {
+
+            nav {
+                padding: 15px 5%;
+            }
+
+            nav div:last-child {
+                display: none;
+            }
+
+            section {
+                padding: 65px 6%;
+            }
+
+            .hero {
+                min-height: 80vh;
+                padding: 60px 6%;
+            }
+
+            .hero h2 {
+                font-size: 21px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .section-heading h2 {
+                font-size: 30px;
+            }
+        }
+    </style>
 </head>
+
 
 <body>
 
-    <h1>Hi, I'm Mounika 👋</h1>
 
-    <h2>Electronics and Communication Engineering Student</h2>
+<!-- NAVIGATION -->
+
+<nav>
+
+    <div class="logo">
+        M<span>.</span>
+    </div>
+
+    <div>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+</nav>
+
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="small-title">
+            ELECTRONICS & COMMUNICATION ENGINEERING
+        </div>
+
+        <h1>
+            Hi, I'm <span>Mounika.</span>
+        </h1>
+
+        <h2>
+            ECE Student • VLSI • Embedded Systems • Software
+        </h2>
+
+        <p>
+            I am an Electronics and Communication Engineering student
+            passionate about digital systems, VLSI, embedded technology
+            and software. I enjoy turning what I learn into practical
+            projects and continuously developing my technical skills.
+        </p>
+
+        <div class="buttons">
+
+            <a href="#projects" class="button primary">
+                View Projects
+            </a>
+
+            <a href="https://github.com/kunigirimounika3-sys"
+               target="_blank"
+               class="button outline">
+                GitHub
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+    <div class="section-heading">
+
+        <small>01 — ABOUT</small>
+
+        <h2>A little about me</h2>
+
+    </div>
+
+
+    <div class="about-box">
+
+        <p>
+            I am currently pursuing B.Tech in Electronics and
+            Communication Engineering and building my foundation
+            in both hardware and software.
+        </p>
+
+        <p>
+            My areas of interest include VLSI design, digital
+            electronics, embedded systems, FPGA and programming.
+            I believe in learning by building, experimenting and
+            improving with every project.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- SKILLS -->
+
+<section id="skills">
+
+    <div class="section-heading">
+
+        <small>02 — SKILLS</small>
+
+        <h2>Technical skills</h2>
+
+    </div>
+
+
+    <div class="skills">
+
+        <div class="skill">C</div>
+        <div class="skill">Python</div>
+        <div class="skill">Verilog</div>
+        <div class="skill">VHDL</div>
+        <div class="skill">ModelSim</div>
+        <div class="skill">Cadence</div>
+        <div class="skill">MATLAB</div>
+        <div class="skill">FPGA</div>
+        <div class="skill">Digital Electronics</div>
+        <div class="skill">Embedded Systems</div>
+
+    </div>
+
+</section>
+
+
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+    <div class="section-heading">
+
+        <small>03 — PROJECTS</small>
+
+        <h2>Things I've built</h2>
+
+    </div>
+
+
+    <div class="project-grid">
+
+
+        <div class="project">
+
+            <div class="project-number">PROJECT 01</div>
+
+            <h3>ALU using Verilog</h3>
+
+            <p>
+                Designed and simulated an Arithmetic Logic Unit
+                using Verilog HDL with a testbench for functional
+                verification.
+            </p>
+
+        </div>
+
+
+
+        <div class="project">
+
+            <div class="project-number">PROJECT 02</div>
+
+            <h3>Smart alert Walking Stick</h3>
+
+            <p>
+                Developed an ultrasonic obstacle detection system
+                using a sensor, buzzer and LED to provide alerts.
+            </p>
+
+        </div>
+
+
+
+        <div class="project">
+
+            <div class="project-number">PROJECT 03</div>
+
+            <h3>More coming soon</h3>
+
+            <p>
+                I am currently working on new VLSI, FPGA,
+                embedded and software projects. This section
+                will grow as I continue learning.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- EXPERIENCE -->
+
+<section id="experience">
+
+    <div class="section-heading">
+
+        <small>04 — EXPERIENCE</small>
+
+        <h2>Internships & learning</h2>
+
+    </div>
+
+
+    <div class="timeline">
+
+
+        <div class="experience">
+
+            <h3>VLSI Design Internship</h3>
+
+            <div class="date">
+                2-week Internship
+            </div>
+
+            <p>
+                Completed a VLSI Design internship at MSME Balanagar,
+                gaining practical exposure to VLSI-related concepts.
+            </p>
+
+        </div>
+
+
+
+        <div class="experience">
+
+            <h3>ASIC IC Design Internship</h3>
+
+            <div class="date">
+                2-week Internship
+            </div>
+
+            <p>
+                Completed an ASIC IC Design internship and gained
+                practical exposure to ASIC design concepts.
+            </p>
+
+        </div>
+
+
+
+        <div class="experience">
+
+            <h3>Introduction to Embedded Systems</h3>
+
+            <div class="date">
+                NPTEL Certification
+            </div>
+
+            <p>
+                Completed the NPTEL course Introduction to
+                Embedded Systems.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- EDUCATION -->
+
+<section class="education">
+
+    <div class="section-heading">
+
+        <small>05 — EDUCATION</small>
+
+        <h2>Education</h2>
+
+    </div>
+
+
+    <div class="education-box">
+
+        <h3>
+            B.Tech — Electronics and Communication Engineering
+        </h3>
+
+        <p>
+            Dhanalakshmi Srinivasan University, Chennai
+        </p>
+
+        <p>
+            Currently pursuing
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- CONTACT -->
+
+<section id="contact" class="contact">
+
+    <div class="section-heading">
+
+        <small>06 — CONTACT</small>
+
+        <h2>Let's connect</h2>
+
+    </div>
+
 
     <p>
-        I am an ECE student interested in VLSI, Embedded Systems,
-        Digital Electronics and Software Development.
+        I'm always interested in learning opportunities,
+        internships, projects and meaningful technical work.
     </p>
 
-    <hr>
 
-    <h2>About Me</h2>
-    <p>
-        I am currently pursuing B.Tech in Electronics and Communication
-        Engineering. I am developing my skills in hardware and software
-        through projects, internships and continuous learning.
-    </p>
+    <div class="contact-links">
 
-    <h2>Skills</h2>
-    <ul>
-        <li>C</li>
-        <li>Python</li>
-        <li>Verilog</li>
-        <li>VHDL</li>
-        <li>ModelSim</li>
-        <li>Cadence</li>
-        <li>MATLAB</li>
-        <li>FPGA</li>
-    </ul>
+        <a href="https://github.com/kunigirimounika3-sys"
+           target="_blank">
+            GitHub
+        </a>
 
-    <h2>Projects</h2>
 
-    <h3>1. ALU using Verilog</h3>
-    <p>
-        Designed and simulated an Arithmetic Logic Unit using Verilog HDL.
-    </p>
+        <a href="https://www.linkedin.com/in/mounika-kunigiri-798769338/"
+           target="_blank">
+            LinkedIn
+        </a>
 
-    <h3>2. Smart Walking Stick</h3>
-    <p>
-        Developed an ultrasonic-based alert system to help detect
-        obstacles using a sensor, buzzer and LED.
-    </p>
+    </div>
 
-    <h2>Internships</h2>
-    <ul>
-        <li>VLSI Design Internship – MSME </li>
-        <li>ASIC IC Design Internship</li>
-    </ul>
+</section>
 
-    <h2>Certifications</h2>
-    <ul>
-        <li>NPTEL – Introduction to Embedded Systems</li>
-    </ul>
 
-    <h2>Contact</h2>
-    <p>
-        LinkedIn: linkedin.com/in/mounika-kunigiri-798769338
-    </p>
+
+<!-- FOOTER -->
+
+<footer>
+
+    © 2026 Mounika · Electronics & Communication Engineering
+
+</footer>
+
 
 </body>
 </html>
